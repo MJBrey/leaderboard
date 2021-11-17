@@ -1,15 +1,5 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\mjbre\IdeaProjects\leaderboard\src\main\scala\com\mjbre\SortTeams.scala:58:36: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : (com.mjbre.shorthands.teamName, com.mjbre.shorthands.totalPoints)[0m
-[0m[[0m[31merror[0m] [0m[0m    (which expands to)  (String, Int)[0m
-[0m[[0m[31merror[0m] [0m[0m required: scala.collection.IterableOnce[(com.mjbre.shorthands.teamName, com.mjbre.shorthands.totalPoints)][0m
-[0m[[0m[31merror[0m] [0m[0m    (which expands to)  scala.collection.IterableOnce[(String, Int)][0m
-[0m[[0m[31merror[0m] [0m[0m              teamsPointsMap._1++tp(0)[0m
-[0m[[0m[31merror[0m] [0m[0m                                   ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\mjbre\IdeaProjects\leaderboard\src\main\scala\com\mjbre\SortTeams.scala:65:34: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : (com.mjbre.shorthands.teamName, com.mjbre.shorthands.totalPoints)[0m
-[0m[[0m[31merror[0m] [0m[0m    (which expands to)  (String, Int)[0m
-[0m[[0m[31merror[0m] [0m[0m required: scala.collection.IterableOnce[(com.mjbre.shorthands.teamName, com.mjbre.shorthands.totalPoints)][0m
-[0m[[0m[31merror[0m] [0m[0m    (which expands to)  scala.collection.IterableOnce[(String, Int)][0m
-[0m[[0m[31merror[0m] [0m[0m              firstUpdatedMap++tp(1)[0m
-[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\mjbre\IdeaProjects\New folder\leaderboard\src\main\scala\Leaderboard.scala:28:13: a pure expression does nothing in statement position[0m
+[0m[[0m[33mwarn[0m] [0m[0m    } yield formatAndPrint[0m
+[0m[[0m[33mwarn[0m] [0m[0m            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m1 deprecation (since 2.13.3); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m

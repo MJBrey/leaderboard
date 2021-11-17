@@ -21,7 +21,7 @@ object SortTeams {
     val teamOneName  = teams._1._1
     val teamOneScore = teams._1._2
     val teamTwoName  = teams._2._1
-    val teamTwoScore = teams._2._1
+    val teamTwoScore = teams._2._2
 
     if (teamOneScore > teamTwoScore) {
       ((teamOneName, 3), (teamTwoName, 0))
@@ -42,8 +42,12 @@ object SortTeams {
           val score = tempString.replaceAll(teamScoreRegex,"").toInt
           val teamName = tempString.replaceAll(teamNameRegex, "")
           (teamName, score)
-      }
+    }
 
+    /**
+    * Only line I worry about because of accessing a collection with an explicit index isn't safe.
+    * I assume it's fine here because I have been guaranteed that the input won't need validation.
+    */
     ((t(0)._1, t(0)._2), (t(1)._1, t(1)._2))
   }
 
@@ -62,14 +66,14 @@ object SortTeams {
             case Some(currentPoints) =>
               teamsPointsMap._1.map(currentTeam => if (currentTeam._1 == teamOneName) (teamOneName, teamOnePoints + currentPoints) else currentTeam)
             case None =>
-              teamsPointsMap._1++Map(teamOneName -> teamOnePoints)
+              teamsPointsMap._1 ++ Map(teamOneName -> teamOnePoints)
           }
 
           val SecondUpdatedMap: Map[teamName, totalPoints] = teamsPointsMap._1.get(teamTwoName) match {
             case Some(currentPoints) =>
               firstUpdatedMap.map(currentTeam => if (currentTeam._1 == teamTwoName) (teamTwoName, teamTwoPoints + currentPoints) else currentTeam)
             case None =>
-              firstUpdatedMap++Map(teamTwoName -> teamTwoPoints)
+              firstUpdatedMap ++ Map(teamTwoName -> teamTwoPoints)
           }
 
           (SecondUpdatedMap, games)
