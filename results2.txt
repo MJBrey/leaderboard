@@ -1,0 +1,10 @@
+Lions 3, Snakes 3
+Tarantulas 1, FC Awesome 0
+Lions 1, FC Awesome 1
+Tarantulas 3, Snakes 1
+Lions 1, The Guys 8,
+Snakes 3, The Guys 2
+FC Awesome 0, The Guys 3
+Tarantulas 7, The Guys 6
+Grouches 0, Number One 1
+Test Team Two 0, Number One 2
