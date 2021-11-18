@@ -40,7 +40,7 @@ object SortTeams {
           //trim left white spaces, trim right white spaces
           val tempString = team.replaceAll("\\s+$", "").replaceAll("^\\s+", "")
           val score = tempString.replaceAll(teamScoreRegex,"").toInt
-          val teamName = tempString.replaceAll(teamNameRegex, "")
+          val teamName = tempString.replaceAll(teamNameRegex, "").trim
           (teamName, score)
     }
 
