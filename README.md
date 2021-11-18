@@ -4,6 +4,9 @@ Given a list of game results, the application will output a leaderboard with eac
 ranked by results. This application will take a file as input and output the results on 
 std out in the terminal from which it is run.
 
+###Assumptions
+When doing this assignment we expect correct input and there is no need for validation in this exercise.
+
 ###Sample input
 Lions 3, Snakes 3
 Tarantulas 1, FC Awesome 0
