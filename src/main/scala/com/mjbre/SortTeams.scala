@@ -45,7 +45,7 @@ object SortTeams {
     }
 
     /**
-    * Only line I worry about because of accessing a collection with an explicit index isn't safe.
+    * Only line I worry about because of accessing a collection with an explicit index isn't always safe.
     * I assume it's fine here because I have been guaranteed that the input won't need validation.
     */
     ((t(0)._1, t(0)._2), (t(1)._1, t(1)._2))
@@ -69,7 +69,7 @@ object SortTeams {
               teamsPointsMap._1 ++ Map(teamOneName -> teamOnePoints)
           }
 
-          val SecondUpdatedMap: Map[teamName, totalPoints] = teamsPointsMap._1.get(teamTwoName) match {
+          val SecondUpdatedMap: Map[teamName, totalPoints] = firstUpdatedMap.get(teamTwoName) match {
             case Some(currentPoints) =>
               firstUpdatedMap.map(currentTeam => if (currentTeam._1 == teamTwoName) (teamTwoName, teamTwoPoints + currentPoints) else currentTeam)
             case None =>
